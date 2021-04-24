@@ -1,0 +1,69 @@
+body {
+    background: rgb(219, 226, 255);
+}
+.body {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgb(219, 226, 255);
+}
+
+input {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #2d9fd9;
+  color: #a0d18c;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  background: #f5f5f5;
+  opacity: 0.9;
+}
+
+input:focus,
+input:focus {
+  outline: none;
+  border: 1px solid darkblue;
+  color: darkblue;
+}
+
+#passwordInput {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  color: #f5f5f5;
+  background: rgb(55, 75, 155);
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  align-self: center;
+  margin-left: 10px;
+}
+
+div p {
+  color: white;
+  background: darkred;
+  margin: 30px auto;
+}
+
+h1 {
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding: 10px 50px;
+  font-size: 1.5em;
+  background: white;
+  border-radius: 10px;
+  border: none;
+  max-width: 400px;
+  display: none;
+}
