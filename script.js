@@ -1,4 +1,4 @@
-let password = "pass";
+let password = "Pass";
 let attempts = 0;
 let attemptsLimit = 3;
 const output = document.querySelector("h1");
