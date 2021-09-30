@@ -1,12 +1,16 @@
+const input = document.querySelector("input");
+const output = document.querySelector("#output");
+const message = document.querySelector("#message");
+const button = document.querySelector("button");
+const inputDiv = document.querySelector("#input-div");
+
+let isLoggedin = false;
 let password = "Pass";
 let attempts = 0;
 let attemptsLimit = 3;
-const output = document.querySelector("h1");
-const input = document.querySelector("input");
-const message = document.querySelector("p");
-const button = document.querySelector("button");
-const passwordInput = document.querySelector("#passwordInput");
-let isLoggedin = false;
+
+//if password not created, prompt to insert password
+//create a secret
 
 // Get the input field
 var enter = document.getElementById("input");
@@ -29,7 +33,7 @@ function authenticateUser() {
   } else if (input.value === password) {
     isLoggedIn = true;
     message.innerHTML = "You are logged in";
-    passwordInput.style.display = "none";
+    inputDiv.style.display = "none";
     output.style.display = "inherit";
     output.innerHTML =
       "The answer to the ultimate question of life, the universe and everything is 42";
