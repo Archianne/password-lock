@@ -8,9 +8,6 @@ let password = "Pass";
 let attempts = 0;
 let attemptsLimit = 3;
 
-//if password not created, prompt to insert password
-//create a secret
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 });

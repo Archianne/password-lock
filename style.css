@@ -16,6 +16,11 @@ body {
   align-items: center;
   height: 80vh;
 }
+@media (max-width: 700px) {
+  body {
+    height: 100vh;
+  }
+}
 
 main .wrapper {
   display: flex;
@@ -27,7 +32,7 @@ main .wrapper {
 main h2 {
   font-family: "Lobster", cursive;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #333;
   text-align: center;
 }
@@ -45,12 +50,11 @@ main .underline::before {
   background: tomato;
   z-index: -1;
   width: 100%;
-  height: 8px;
-  bottom: 6px;
+  height: 11px;
+  bottom: 5px;
 }
 main #output {
   text-align: center;
-  margin-top: 20px;
 }
 main form {
   display: flex;
@@ -84,6 +88,11 @@ main form button:hover {
   border: none;
   color: whitesmoke;
   background: tomato;
+}
+@media (max-width: 700px) {
+  main form button {
+    display: none;
+  }
 }
 
 footer {
