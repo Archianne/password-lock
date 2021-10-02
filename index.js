@@ -1,8 +1,7 @@
 const input = document.querySelector("input");
 const output = document.querySelector("#output");
-const message = document.querySelector("#message");
 const button = document.querySelector("button");
-const inputDiv = document.querySelector("#input-div");
+const form = document.querySelector("form");
 
 let isLoggedin = false;
 let password = "Pass";
@@ -12,34 +11,22 @@ let attemptsLimit = 3;
 //if password not created, prompt to insert password
 //create a secret
 
-// Get the input field
-var enter = document.getElementById("input");
-
-// Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function (event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("button").click();
-  }
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 });
 
-function authenticateUser() {
+const authenticateUser = () => {
   if (input.value != password && !isLoggedin && attempts < attemptsLimit) {
     attempts++;
     console.log(attempts);
   } else if (input.value === password) {
     isLoggedIn = true;
-    message.innerHTML = "You are logged in";
-    inputDiv.style.display = "none";
+    form.style.display = "none";
     output.style.display = "inherit";
-    output.innerHTML =
-      "The answer to the ultimate question of life, the universe and everything is 42";
+    output.innerHTML = `The <span class="underline"> answer</span> to the ultimate question of life, the universe and everything is <span class="underline">42</span>`;
   } else {
     message.innerHTML = "Too many entries";
-    passwordInput.style.display = "none";
+    form.style.display = "none";
   }
   input.value = "";
-}
+};

@@ -17,6 +17,13 @@ body {
   height: 80vh;
 }
 
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
 main h2 {
   font-family: "Lobster", cursive;
   font-size: 40px;
@@ -28,11 +35,28 @@ main h2 span {
   font-family: "Lobster", cursive;
   color: tomato;
 }
-main #input-div {
+main .underline {
+  position: relative;
+  display: inline-block;
+}
+main .underline::before {
+  position: absolute;
+  content: "";
+  background: tomato;
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  bottom: 6px;
+}
+main #output {
+  text-align: center;
+  margin-top: 20px;
+}
+main form {
   display: flex;
   align-items: center;
 }
-main #input-div input {
+main form input {
   border-radius: 5px;
   border: 1px solid tomato;
   color: #333;
@@ -41,10 +65,10 @@ main #input-div input {
   padding-left: 10px;
   background: #f5f5f5;
 }
-main #input-div input:focus {
+main form input:focus {
   outline: none;
 }
-main #input-div button {
+main form button {
   margin-left: 10px;
   width: 80px;
   height: 31px;
@@ -56,11 +80,10 @@ main #input-div button {
   background-color: whitesmoke;
   cursor: pointer;
 }
-main #input-div button:hover {
+main form button:hover {
   border: none;
   color: whitesmoke;
   background: tomato;
-  background: radial-gradient(circle, tomato 0%, #9e1717 100%);
 }
 
 footer {
