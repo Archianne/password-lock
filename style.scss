@@ -5,6 +5,7 @@
 $background: whitesmoke;
 $accent: rgb(255, 99, 71);
 $accent2: rgba(158, 23, 23, 1);
+$accent3: rgba(245, 119, 97, 0.726);
 
 // ================================================
 * {
@@ -23,7 +24,7 @@ body {
   height: 80vh;
 
   @media (max-width: 700px) {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
@@ -61,7 +62,7 @@ main {
     &::before {
       position: absolute;
       content: "";
-      background: $accent;
+      background: $accent3;
       z-index: -1;
       width: 100%;
       height: 11px;
