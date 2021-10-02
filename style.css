@@ -27,7 +27,13 @@ main .wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 50vw;
+}
+@media (max-width: 700px) {
+  main .wrapper {
+    width: 80vw;
+  }
 }
 main h2 {
   font-family: "Lobster", cursive;
